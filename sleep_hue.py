@@ -1,4 +1,4 @@
-"""Sleep-Hue CLI: bedtime wind-down and wake-up via Philips Hue v2 API."""
+"""Sleep-Hue CLI: bedtime wind-down via Philips Hue v2 API."""
 import argparse
 import json
 import os
@@ -94,14 +94,6 @@ def cmd_wind_down(b, cfg):
     print(f"wind-down: {cfg['room']} -> {cfg['wind_down']['scene']} over {duration/1000:.0f}s")
 
 
-def cmd_wake(b, cfg):
-    room = b.find_room(cfg["room"])
-    scene = b.find_scene(room["id"], cfg["wake"]["scene"])
-    duration = cfg["wake"]["duration_ms"]
-    b.activate_scene(scene["id"], duration)
-    print(f"wake: {cfg['room']} -> {cfg['wake']['scene']} over {duration/1000:.0f}s")
-
-
 def cmd_off(b, cfg):
     room = b.find_room(cfg["room"])
     b.set_grouped_light_off(b.grouped_light_id(room))
@@ -122,7 +114,6 @@ def cmd_discover(b, cfg):
 
 COMMANDS = {
     "wind-down": cmd_wind_down,
-    "wake": cmd_wake,
     "off": cmd_off,
     "discover": cmd_discover,
 }

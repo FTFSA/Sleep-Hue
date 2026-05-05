@@ -3,9 +3,5 @@
   "wind_down": {
     "scene": "Sleepy",
     "duration_ms": 1800000
-  },
-  "wake": {
-    "scene": "Energize",
-    "duration_ms": 600000
   }
 }
