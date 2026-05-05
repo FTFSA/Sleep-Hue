@@ -1,0 +1,7 @@
+{
+  "room": "Bedroom",
+  "wind_down": {
+    "scene": "Sleepy",
+    "duration_ms": 1800000
+  }
+}

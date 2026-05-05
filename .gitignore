@@ -1,0 +1,5 @@
+discover.py
+bridge.env
+.env
+*.local
+__pycache__/
