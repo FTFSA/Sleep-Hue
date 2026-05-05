@@ -7,13 +7,8 @@
 #include <Adafruit_NeoPixel.h>
 #include "secrets.h"
 
-#ifndef BUTTON_PIN
-  #if CONFIG_IDF_TARGET_ESP32C3
-    #define BUTTON_PIN 9
-  #else
-    #define BUTTON_PIN 0
-  #endif
-#endif
+// External momentary button wired between A0 and GND.
+#define BUTTON_PIN A0
 
 Adafruit_NeoPixel pixel(1, PIN_NEOPIXEL, NEO_GRB + NEO_KHZ800);
 
