@@ -1,8 +1,6 @@
-discover.py
 bridge.env
 .env
 *.local
 __pycache__/
-arduino/**/secrets.h
 build/
 .pio/
